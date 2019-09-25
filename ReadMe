@@ -1,0 +1,8 @@
+这里使用mybatis多数据源，
+实现的方式是分不同的包，如mysql数据源的实现（dao,xml）放在同一包下；oracle数据源的实现（dao,xml）放在另一包下；
+
+至于 config， 其实我做了两种写法：  1.DbConfig  2.MysqlDbConfig 、 OracleDbConfig 
+
+其实是一样的，只不过是写在一起还是分开写的区别 ，
+当然了 ，DbConfig 重写了MapperScannerConfugurer 接口
+而后者是使用 @MappScan 扫描
