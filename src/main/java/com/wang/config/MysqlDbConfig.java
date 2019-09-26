@@ -50,7 +50,7 @@ public class MysqlDbConfig {
 		
 	}
 	
-	@Bean
+	@Bean("mysqlTransactionManager")
 	public PlatformTransactionManager mysqlTransactionManager(@Qualifier("mysqlDataSource")DataSource mysqlDataSource) {
 		DataSourceTransactionManager mysqlTransactionManager=new DataSourceTransactionManager() ;
 		mysqlTransactionManager.setDataSource(mysqlDataSource);

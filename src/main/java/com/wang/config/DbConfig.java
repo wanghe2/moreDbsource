@@ -103,7 +103,7 @@ public class DbConfig {
 		return mysqlTransactionManager;
 	}
 	
-	@Bean("mysqlTransactionManager")
+	@Bean("oracleTransactionManager")
 	public PlatformTransactionManager oracleTransactionManager(@Qualifier("oracleSource")DataSource oracleSource) {
 		DataSourceTransactionManager oracleTransactionManager=new DataSourceTransactionManager() ;
 		oracleTransactionManager.setDataSource(oracleSource);

@@ -18,5 +18,8 @@ public interface SeckillDao {
 	 * @return
 	 */
 	List<Seckill>queryAll();
-
+	
+	void insertSeckill(Seckill seckill);
+	
+	void updateSeckill(Seckill seckill);
 }

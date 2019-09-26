@@ -52,7 +52,7 @@ public class OracleDbConfig {
 		
 	}
 	
-	@Bean
+	@Bean("oracleTransactionManager")
 	public PlatformTransactionManager oracleTransactionManager(@Qualifier("oracleSource")DataSource oracleSource ) {
 		DataSourceTransactionManager oracleTransactionManager=new DataSourceTransactionManager() ;
 		oracleTransactionManager.setDataSource(oracleSource);

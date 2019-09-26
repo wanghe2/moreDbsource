@@ -6,4 +6,6 @@ import com.wang.bean.User;
 
 public interface UserService {
 	 List<User> queryAll();
+	 
+	 void dbOperateWithShiwu();
 }

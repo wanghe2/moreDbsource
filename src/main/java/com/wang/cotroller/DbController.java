@@ -20,7 +20,7 @@ public class DbController {
 	@Autowired
 	SeckillService seckillService;
 	
-	@RequestMapping("/getUserList")
+	@RequestMapping("getUserList")
 	public String getAllUser() {
 		List<User> users=userService.queryAll();
 		StringBuilder userstr=new StringBuilder();
@@ -42,5 +42,15 @@ public class DbController {
 		return seckillstr.toString();
 	}
 	
-
+	@RequestMapping("operateMysqlDb")
+	public String operateMysqlDb() {
+		seckillService.dbOperateWithShiwu();
+		return "完成";
+	}
+	
+	@RequestMapping("operateOracleDb")
+	public String operateOracleDb() {
+		userService.dbOperateWithShiwu();
+		return "完成";
+	}
 }
